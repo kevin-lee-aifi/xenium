@@ -1,0 +1,110 @@
+{
+    "name": "ID.RENAME.XENIUM_RANGER_RENAMER_CS.XR_RENAME.fork0.chnk0",
+    "type": "local",
+    "cwd": "/home/workspace/xenium/renamed/output_corrected_TSS05029-004/XENIUM_RANGER_RENAMER_CS/XR_RENAME/fork0/chnk0-u4858e6839d/files",
+    "rusage": {
+        "self": {
+            "ru_maxrss": 17552,
+            "ru_ixrss": 0,
+            "ru_idrss": 0,
+            "ru_minflt": 900,
+            "ru_majflt": 0,
+            "ru_nswap": 0,
+            "ru_utime": 0.001199,
+            "ru_stime": 0.007759,
+            "ru_inblock": 0,
+            "ru_oublock": 40,
+            "ru_msgsnd": 0,
+            "ru_msgrcv": 0,
+            "ru_nsignals": 0,
+            "ru_nivcsw": 0
+        },
+        "children": {
+            "ru_maxrss": 61656,
+            "ru_ixrss": 0,
+            "ru_idrss": 0,
+            "ru_minflt": 22938,
+            "ru_majflt": 0,
+            "ru_nswap": 0,
+            "ru_utime": 0.359825,
+            "ru_stime": 0.053855,
+            "ru_inblock": 0,
+            "ru_oublock": 19488,
+            "ru_msgsnd": 0,
+            "ru_msgrcv": 0,
+            "ru_nsignals": 0,
+            "ru_nivcsw": 3
+        }
+    },
+    "used_bytes": {
+        "rss": 17973248,
+        "shared": 4153344,
+        "vmem": 1561059328,
+        "text": 1323008,
+        "stack": 74760192,
+        "proc_count": 1
+    },
+    "io": {
+        "total": {
+            "read": {
+                "sysc": 5,
+                "bytes": 0
+            },
+            "write": {
+                "sysc": 0,
+                "bytes": 0
+            }
+        },
+        "max": {
+            "read": {
+                "sysc": 1426.3503972385856,
+                "bytes": 0
+            },
+            "write": {
+                "sysc": 0,
+                "bytes": 0
+            }
+        },
+        "dev": {
+            "read": {
+                "sysc": 0,
+                "bytes": 0
+            },
+            "write": {
+                "sysc": 0,
+                "bytes": 0
+            }
+        }
+    },
+    "wallclock": {
+        "start": "2026-04-20T12:50:53.270751631-07:00",
+        "end": "2026-04-20T12:50:53.687083044-07:00",
+        "duration_seconds": 0.416331413
+    },
+    "profile_mode": "disable",
+    "stackvars_flag": "disable",
+    "monitor_flag": "disable",
+    "invocation": {
+        "call": "XENIUM_RANGER_RENAMER_CS",
+        "args": {
+            "command_line": "xeniumranger rename --id=output_corrected_TSS05029-004 --xenium-bundle=/home/workspace/xenium/bundles/TSS05029-005 --region-name=TSS05029-004 --cassette-name=EXP-02059",
+            "output_bundle": "/home/workspace/xenium/bundles/TSS05029-005",
+            "rename_params": {
+                "cassette_name": "EXP-02059",
+                "region_name": "TSS05029-004"
+            },
+            "run_id": "output_corrected_TSS05029-004",
+            "software_version": "xenium-4.0.1.1"
+        },
+        "mro_file": "insitu/xenium_ranger_renamer_cs.mro"
+    },
+    "version": {
+        "martian": "v4.0.14",
+        "pipelines": "xenium-4.0.1.1"
+    },
+    "host": "pbmcflow-0",
+    "pid": 18533,
+    "threads": 1,
+    "memGB": 4,
+    "vmemGB": 16384
+}

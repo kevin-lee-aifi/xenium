@@ -1,0 +1,169 @@
+[
+    {
+        "name": "XENIUM_RANGER_RENAMER_CS",
+        "fqname": "ID.RENAME.XENIUM_RANGER_RENAMER_CS",
+        "highmem": {
+            "rss": 12410880,
+            "shared": 9388032,
+            "vmem": 1721630720,
+            "text": 5275648,
+            "stack": 93589504,
+            "proc_count": 12
+        },
+        "forks": [
+            {
+                "split_stats": null,
+                "join_stats": null,
+                "fork_stats": {
+                    "start": "2026-04-20T12:50:53.270751631-07:00",
+                    "end": "2026-04-20T12:50:53.687083044-07:00",
+                    "walltime": 0.416331413,
+                    "num_jobs": 1,
+                    "num_threads": 1,
+                    "duration": 0.416331413,
+                    "core_hours": 0.00011564761472222222,
+                    "maxrss": 61656,
+                    "maxvmem": 1524472,
+                    "maxrss_requested": 4194304,
+                    "maxvmem_requested": 17179869184,
+                    "in_blocks": 0,
+                    "out_blocks": 19528,
+                    "total_blocks": 19528,
+                    "in_blocks_rate": 0,
+                    "out_blocks_rate": 46904.94012759013,
+                    "total_blocks_rate": 46904.94012759013,
+                    "in_bytes": 0,
+                    "out_bytes": 0,
+                    "in_bytes_rate": 0,
+                    "out_bytes_rate": 0,
+                    "in_bytes_peak": 0,
+                    "out_bytes_peak": 0,
+                    "usertime": 0.361024,
+                    "systemtime": 0.061614,
+                    "total_files": 3,
+                    "total_bytes": 9955677,
+                    "output_files": 3,
+                    "output_bytes": 9955677,
+                    "vdr_files": 0,
+                    "vdr_bytes": 0,
+                    "in_bytes_dev": 0,
+                    "out_bytes_dev": 0
+                },
+                "stages": [
+                    {
+                        "name": "XR_RENAME",
+                        "fqname": "ID.RENAME.XENIUM_RANGER_RENAMER_CS.XR_RENAME",
+                        "forki": 0
+                    }
+                ],
+                "chunks": [],
+                "index": 0
+            }
+        ],
+        "bytehist": [
+            {
+                "ts": "2026-04-20T12:50:53.270751631-07:00",
+                "desc": "ID.RENAME.XENIUM_RANGER_RENAMER_CS.XR_RENAME alloc",
+                "bytes": 9960647
+            }
+        ],
+        "maxbytes": 9960647,
+        "type": "pipeline"
+    },
+    {
+        "name": "XR_RENAME",
+        "fqname": "ID.RENAME.XENIUM_RANGER_RENAMER_CS.XR_RENAME",
+        "forks": [
+            {
+                "split_stats": null,
+                "join_stats": null,
+                "fork_stats": {
+                    "start": "2026-04-20T12:50:53.270751631-07:00",
+                    "end": "2026-04-20T12:50:53.687083044-07:00",
+                    "walltime": 0.416331413,
+                    "num_jobs": 1,
+                    "num_threads": 1,
+                    "duration": 0.416331413,
+                    "core_hours": 0.00011564761472222222,
+                    "maxrss": 61656,
+                    "maxvmem": 1524472,
+                    "maxrss_requested": 4194304,
+                    "maxvmem_requested": 17179869184,
+                    "in_blocks": 0,
+                    "out_blocks": 19528,
+                    "total_blocks": 19528,
+                    "in_blocks_rate": 0,
+                    "out_blocks_rate": 46904.94012759013,
+                    "total_blocks_rate": 46904.94012759013,
+                    "in_bytes": 0,
+                    "out_bytes": 0,
+                    "in_bytes_rate": 0,
+                    "out_bytes_rate": 0,
+                    "in_bytes_peak": 0,
+                    "out_bytes_peak": 0,
+                    "usertime": 0.361024,
+                    "systemtime": 0.061614,
+                    "total_files": 3,
+                    "total_bytes": 9955677,
+                    "output_files": 3,
+                    "output_bytes": 9955677,
+                    "vdr_files": 0,
+                    "vdr_bytes": 0,
+                    "in_bytes_dev": 0,
+                    "out_bytes_dev": 0
+                },
+                "stages": [
+                    {
+                        "name": "XR_RENAME",
+                        "fqname": "ID.RENAME.XENIUM_RANGER_RENAMER_CS.XR_RENAME",
+                        "forki": 0
+                    }
+                ],
+                "chunks": [
+                    {
+                        "chunk_stats": {
+                            "start": "2026-04-20T12:50:53.270751631-07:00",
+                            "end": "2026-04-20T12:50:53.687083044-07:00",
+                            "walltime": 0.416331413,
+                            "num_jobs": 1,
+                            "num_threads": 1,
+                            "duration": 0.416331413,
+                            "core_hours": 0.00011564761472222222,
+                            "maxrss": 61656,
+                            "maxvmem": 1524472,
+                            "maxrss_requested": 4194304,
+                            "maxvmem_requested": 17179869184,
+                            "in_blocks": 0,
+                            "out_blocks": 19528,
+                            "total_blocks": 19528,
+                            "in_blocks_rate": 0,
+                            "out_blocks_rate": 46904.94012759013,
+                            "total_blocks_rate": 46904.94012759013,
+                            "in_bytes": 0,
+                            "out_bytes": 0,
+                            "in_bytes_rate": 0,
+                            "out_bytes_rate": 0,
+                            "in_bytes_peak": 0,
+                            "out_bytes_peak": 0,
+                            "usertime": 0.361024,
+                            "systemtime": 0.061614,
+                            "total_files": 3,
+                            "total_bytes": 9955677,
+                            "output_files": 0,
+                            "output_bytes": 0,
+                            "vdr_files": 0,
+                            "vdr_bytes": 0,
+                            "in_bytes_dev": 0,
+                            "out_bytes_dev": 0
+                        },
+                        "index": 0
+                    }
+                ],
+                "index": 0
+            }
+        ],
+        "bytehist": null,
+        "maxbytes": 0,
+        "type": "stage"
+    }
+]

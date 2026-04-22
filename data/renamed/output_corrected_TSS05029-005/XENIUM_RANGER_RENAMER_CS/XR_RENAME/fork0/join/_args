@@ -1,0 +1,13 @@
+{
+    "__mem_gb": 4,
+    "__threads": 1,
+    "__vmem_gb": 16384,
+    "command_line": "xeniumranger rename --id=output_corrected_TSS05029-005 --xenium-bundle=/home/workspace/xenium/bundles/TSS05029-004 --region-name=TSS05029-005 --cassette-name=EXP-02060",
+    "output_bundle_path": "/home/workspace/xenium/bundles/TSS05029-004",
+    "rename_params": {
+        "cassette_name": "EXP-02060",
+        "region_name": "TSS05029-005"
+    },
+    "run_id": "output_corrected_TSS05029-005",
+    "software_version": "xenium-4.0.1.1"
+}

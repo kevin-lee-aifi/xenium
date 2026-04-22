@@ -1,0 +1,12 @@
+@include "insitu/xenium_ranger_renamer_cs.mro"
+
+call XENIUM_RANGER_RENAMER_CS(
+    output_bundle    = "/home/workspace/xenium/bundles/TSS05029-005",
+    rename_params    = {
+        cassette_name: "EXP-02059",
+        region_name:   "TSS05029-004",
+    },
+    run_id           = "output_corrected_TSS05029-004",
+    command_line     = "xeniumranger rename --id=output_corrected_TSS05029-004 --xenium-bundle=/home/workspace/xenium/bundles/TSS05029-005 --region-name=TSS05029-004 --cassette-name=EXP-02059",
+    software_version = "xenium-4.0.1.1",
+)

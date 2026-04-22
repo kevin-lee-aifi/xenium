@@ -1,0 +1,453 @@
+[
+    {
+        "name": "XENIUM_RANGER_RENAMER_CS",
+        "fqname": "ID.RENAME.XENIUM_RANGER_RENAMER_CS",
+        "path": "/home/workspace/xenium/renamed/output_corrected_TSS06403-004/XENIUM_RANGER_RENAMER_CS",
+        "state": "complete",
+        "metadata": {
+            "path": "/home/workspace/xenium/renamed/output_corrected_TSS06403-004/XENIUM_RANGER_RENAMER_CS",
+            "names": []
+        },
+        "stagecodeCmd": "",
+        "forks": [
+            {
+                "argPermute": null,
+                "joinDef": null,
+                "state": "complete",
+                "metadata": {
+                    "path": "/home/workspace/xenium/renamed/output_corrected_TSS06403-004/XENIUM_RANGER_RENAMER_CS/fork0",
+                    "names": [
+                        "complete",
+                        "invocation",
+                        "outs",
+                        "vdrkill"
+                    ]
+                },
+                "split_metadata": {
+                    "path": "/home/workspace/xenium/renamed/output_corrected_TSS06403-004/XENIUM_RANGER_RENAMER_CS/fork0/split",
+                    "names": []
+                },
+                "join_metadata": {
+                    "path": "/home/workspace/xenium/renamed/output_corrected_TSS06403-004/XENIUM_RANGER_RENAMER_CS/fork0/join",
+                    "names": []
+                },
+                "bindings": {
+                    "Argument": [
+                        {
+                            "mode": "",
+                            "node": null,
+                            "matchedFork": null,
+                            "value": "/home/workspace/xenium/bundles/TSS06403-005",
+                            "id": "output_bundle",
+                            "type": "path",
+                            "waiting": false
+                        },
+                        {
+                            "mode": "",
+                            "node": null,
+                            "matchedFork": null,
+                            "value": {
+                                "cassette_name": "EXP-02059",
+                                "region_name": "TSS06403-004"
+                            },
+                            "id": "rename_params",
+                            "type": "RenameParams",
+                            "waiting": false
+                        },
+                        {
+                            "mode": "",
+                            "node": null,
+                            "matchedFork": null,
+                            "value": "output_corrected_TSS06403-004",
+                            "id": "run_id",
+                            "type": "string",
+                            "waiting": false
+                        },
+                        {
+                            "mode": "",
+                            "node": null,
+                            "matchedFork": null,
+                            "value": "xeniumranger rename --id=output_corrected_TSS06403-004 --xenium-bundle=/home/workspace/xenium/bundles/TSS06403-005 --region-name=TSS06403-004 --cassette-name=EXP-02059",
+                            "id": "command_line",
+                            "type": "string",
+                            "waiting": false
+                        },
+                        {
+                            "mode": "",
+                            "node": null,
+                            "matchedFork": null,
+                            "value": "xenium-4.0.1.1",
+                            "id": "software_version",
+                            "type": "string",
+                            "waiting": false
+                        }
+                    ],
+                    "Return": [
+                        {
+                            "mode": "reference",
+                            "node": "ID.RENAME.XENIUM_RANGER_RENAMER_CS.XR_RENAME",
+                            "matchedFork": null,
+                            "value": "/home/workspace/xenium/renamed/output_corrected_TSS06403-004/XENIUM_RANGER_RENAMER_CS/XR_RENAME/fork0/chnk0-u48d5e683aa/files/metrics_summary.csv",
+                            "id": "metrics_summary",
+                            "type": "csv",
+                            "waiting": false
+                        },
+                        {
+                            "mode": "reference",
+                            "node": "ID.RENAME.XENIUM_RANGER_RENAMER_CS.XR_RENAME",
+                            "matchedFork": null,
+                            "value": null,
+                            "id": "transcripts",
+                            "type": "zarr.zip",
+                            "waiting": false
+                        },
+                        {
+                            "mode": "reference",
+                            "node": "ID.RENAME.XENIUM_RANGER_RENAMER_CS.XR_RENAME",
+                            "matchedFork": null,
+                            "value": null,
+                            "id": "transcript_info_pq",
+                            "type": "parquet",
+                            "waiting": false
+                        },
+                        {
+                            "mode": "reference",
+                            "node": "ID.RENAME.XENIUM_RANGER_RENAMER_CS.XR_RENAME",
+                            "matchedFork": null,
+                            "value": null,
+                            "id": "cell_info_csv",
+                            "type": "csv.gz",
+                            "waiting": false
+                        },
+                        {
+                            "mode": "reference",
+                            "node": "ID.RENAME.XENIUM_RANGER_RENAMER_CS.XR_RENAME",
+                            "matchedFork": null,
+                            "value": null,
+                            "id": "cell_info_pq",
+                            "type": "parquet",
+                            "waiting": false
+                        },
+                        {
+                            "mode": "reference",
+                            "node": "ID.RENAME.XENIUM_RANGER_RENAMER_CS.XR_RENAME",
+                            "matchedFork": null,
+                            "value": null,
+                            "id": "cell_segmentation",
+                            "type": "zarr.zip",
+                            "waiting": false
+                        },
+                        {
+                            "mode": "reference",
+                            "node": "ID.RENAME.XENIUM_RANGER_RENAMER_CS.XR_RENAME",
+                            "matchedFork": null,
+                            "value": null,
+                            "id": "nucleus_boundaries_csv",
+                            "type": "csv.gz",
+                            "waiting": false
+                        },
+                        {
+                            "mode": "reference",
+                            "node": "ID.RENAME.XENIUM_RANGER_RENAMER_CS.XR_RENAME",
+                            "matchedFork": null,
+                            "value": null,
+                            "id": "cell_boundaries_csv",
+                            "type": "csv.gz",
+                            "waiting": false
+                        },
+                        {
+                            "mode": "reference",
+                            "node": "ID.RENAME.XENIUM_RANGER_RENAMER_CS.XR_RENAME",
+                            "matchedFork": null,
+                            "value": null,
+                            "id": "nucleus_boundaries_pq",
+                            "type": "parquet",
+                            "waiting": false
+                        },
+                        {
+                            "mode": "reference",
+                            "node": "ID.RENAME.XENIUM_RANGER_RENAMER_CS.XR_RENAME",
+                            "matchedFork": null,
+                            "value": null,
+                            "id": "cell_boundaries_pq",
+                            "type": "parquet",
+                            "waiting": false
+                        },
+                        {
+                            "mode": "reference",
+                            "node": "ID.RENAME.XENIUM_RANGER_RENAMER_CS.XR_RENAME",
+                            "matchedFork": null,
+                            "value": null,
+                            "id": "analysis_zarr_zip",
+                            "type": "zarr.zip",
+                            "waiting": false
+                        },
+                        {
+                            "mode": "reference",
+                            "node": "ID.RENAME.XENIUM_RANGER_RENAMER_CS.XR_RENAME",
+                            "matchedFork": null,
+                            "value": null,
+                            "id": "cell_feature_matrix_zarr_zip",
+                            "type": "zarr.zip",
+                            "waiting": false
+                        },
+                        {
+                            "mode": "reference",
+                            "node": "ID.RENAME.XENIUM_RANGER_RENAMER_CS.XR_RENAME",
+                            "matchedFork": null,
+                            "value": null,
+                            "id": "cell_feature_matrix_h5",
+                            "type": "h5",
+                            "waiting": false
+                        },
+                        {
+                            "mode": "reference",
+                            "node": "ID.RENAME.XENIUM_RANGER_RENAMER_CS.XR_RENAME",
+                            "matchedFork": null,
+                            "value": null,
+                            "id": "morphology",
+                            "type": "ome.tif",
+                            "waiting": false
+                        },
+                        {
+                            "mode": "reference",
+                            "node": "ID.RENAME.XENIUM_RANGER_RENAMER_CS.XR_RENAME",
+                            "matchedFork": null,
+                            "value": null,
+                            "id": "morphology_focus_multifile",
+                            "type": "path",
+                            "waiting": false
+                        },
+                        {
+                            "mode": "reference",
+                            "node": "ID.RENAME.XENIUM_RANGER_RENAMER_CS.XR_RENAME",
+                            "matchedFork": null,
+                            "value": "/home/workspace/xenium/renamed/output_corrected_TSS06403-004/XENIUM_RANGER_RENAMER_CS/XR_RENAME/fork0/chnk0-u48d5e683aa/files/experiment.xenium",
+                            "id": "experiment_xenium",
+                            "type": "json",
+                            "waiting": false
+                        },
+                        {
+                            "mode": "reference",
+                            "node": "ID.RENAME.XENIUM_RANGER_RENAMER_CS.XR_RENAME",
+                            "matchedFork": null,
+                            "value": "/home/workspace/xenium/renamed/output_corrected_TSS06403-004/XENIUM_RANGER_RENAMER_CS/XR_RENAME/fork0/chnk0-u48d5e683aa/files/analysis_summary.html",
+                            "id": "web_summary",
+                            "type": "html",
+                            "waiting": false
+                        },
+                        {
+                            "mode": "reference",
+                            "node": "ID.RENAME.XENIUM_RANGER_RENAMER_CS.XR_RENAME",
+                            "matchedFork": null,
+                            "value": null,
+                            "id": "cell_feature_matrix_mtx",
+                            "type": "path",
+                            "waiting": false
+                        },
+                        {
+                            "mode": "reference",
+                            "node": "ID.RENAME.XENIUM_RANGER_RENAMER_CS.XR_RENAME",
+                            "matchedFork": null,
+                            "value": null,
+                            "id": "analysis_csv",
+                            "type": "path",
+                            "waiting": false
+                        },
+                        {
+                            "mode": "reference",
+                            "node": "ID.RENAME.XENIUM_RANGER_RENAMER_CS.XR_RENAME",
+                            "matchedFork": null,
+                            "value": null,
+                            "id": "aux_outputs",
+                            "type": "AuxOutputs",
+                            "waiting": false
+                        },
+                        {
+                            "mode": "reference",
+                            "node": "ID.RENAME.XENIUM_RANGER_RENAMER_CS.XR_RENAME",
+                            "matchedFork": null,
+                            "value": null,
+                            "id": "gene_panel",
+                            "type": "json",
+                            "waiting": false
+                        }
+                    ]
+                },
+                "chunks": [],
+                "index": 0
+            }
+        ],
+        "edges": [
+            {
+                "from": "ID.RENAME.XENIUM_RANGER_RENAMER_CS.XR_RENAME",
+                "to": "ID.RENAME.XENIUM_RANGER_RENAMER_CS"
+            }
+        ],
+        "stagecodeLang": "",
+        "type": "pipeline"
+    },
+    {
+        "name": "XR_RENAME",
+        "fqname": "ID.RENAME.XENIUM_RANGER_RENAMER_CS.XR_RENAME",
+        "path": "/home/workspace/xenium/renamed/output_corrected_TSS06403-004/XENIUM_RANGER_RENAMER_CS/XR_RENAME",
+        "state": "complete",
+        "metadata": {
+            "path": "/home/workspace/xenium/renamed/output_corrected_TSS06403-004/XENIUM_RANGER_RENAMER_CS/XR_RENAME",
+            "names": []
+        },
+        "stagecodeCmd": "/home/workspace/xeniumranger-xenium4.0/lib/bin/xr_core_stages martian xr_rename",
+        "forks": [
+            {
+                "argPermute": null,
+                "joinDef": {
+                    "__threads": 1,
+                    "__mem_gb": 4,
+                    "__vmem_gb": 16384
+                },
+                "state": "complete",
+                "metadata": {
+                    "path": "/home/workspace/xenium/renamed/output_corrected_TSS06403-004/XENIUM_RANGER_RENAMER_CS/XR_RENAME/fork0",
+                    "names": [
+                        "complete",
+                        "invocation",
+                        "outs",
+                        "vdrkill"
+                    ]
+                },
+                "split_metadata": {
+                    "path": "/home/workspace/xenium/renamed/output_corrected_TSS06403-004/XENIUM_RANGER_RENAMER_CS/XR_RENAME/fork0/split",
+                    "names": [
+                        "args",
+                        "complete",
+                        "stage_defs"
+                    ]
+                },
+                "join_metadata": {
+                    "path": "/home/workspace/xenium/renamed/output_corrected_TSS06403-004/XENIUM_RANGER_RENAMER_CS/XR_RENAME/fork0/join",
+                    "names": [
+                        "args",
+                        "chunk_defs",
+                        "complete",
+                        "outs"
+                    ]
+                },
+                "bindings": {
+                    "Argument": [
+                        {
+                            "mode": "",
+                            "node": null,
+                            "matchedFork": null,
+                            "value": "/home/workspace/xenium/bundles/TSS06403-005",
+                            "id": "output_bundle_path",
+                            "type": "path",
+                            "waiting": false
+                        },
+                        {
+                            "mode": "",
+                            "node": null,
+                            "matchedFork": null,
+                            "value": {
+                                "cassette_name": "EXP-02059",
+                                "region_name": "TSS06403-004"
+                            },
+                            "id": "rename_params",
+                            "type": "RenameParams",
+                            "waiting": false
+                        },
+                        {
+                            "mode": "",
+                            "node": null,
+                            "matchedFork": null,
+                            "value": "output_corrected_TSS06403-004",
+                            "id": "run_id",
+                            "type": "string",
+                            "waiting": false
+                        },
+                        {
+                            "mode": "",
+                            "node": null,
+                            "matchedFork": null,
+                            "value": "xeniumranger rename --id=output_corrected_TSS06403-004 --xenium-bundle=/home/workspace/xenium/bundles/TSS06403-005 --region-name=TSS06403-004 --cassette-name=EXP-02059",
+                            "id": "command_line",
+                            "type": "string",
+                            "waiting": false
+                        },
+                        {
+                            "mode": "",
+                            "node": null,
+                            "matchedFork": null,
+                            "value": "xenium-4.0.1.1",
+                            "id": "software_version",
+                            "type": "string",
+                            "waiting": false
+                        }
+                    ],
+                    "Return": [
+                        {
+                            "mode": "reference",
+                            "node": "ID.RENAME.XENIUM_RANGER_RENAMER_CS.XR_RENAME",
+                            "matchedFork": null,
+                            "value": {
+                                "analysis_csv": null,
+                                "analysis_zarr_zip": null,
+                                "aux_outputs": null,
+                                "cell_boundaries_csv": null,
+                                "cell_boundaries_pq": null,
+                                "cell_feature_matrix_h5": null,
+                                "cell_feature_matrix_mtx": null,
+                                "cell_feature_matrix_zarr_zip": null,
+                                "cell_info_csv": null,
+                                "cell_info_pq": null,
+                                "cell_segmentation": null,
+                                "experiment_xenium": "/home/workspace/xenium/renamed/output_corrected_TSS06403-004/XENIUM_RANGER_RENAMER_CS/XR_RENAME/fork0/chnk0-u48d5e683aa/files/experiment.xenium",
+                                "gene_panel": null,
+                                "metrics_summary": "/home/workspace/xenium/renamed/output_corrected_TSS06403-004/XENIUM_RANGER_RENAMER_CS/XR_RENAME/fork0/chnk0-u48d5e683aa/files/metrics_summary.csv",
+                                "morphology": null,
+                                "morphology_focus": null,
+                                "morphology_focus_multifile": null,
+                                "morphology_focus_qc_masks_old": null,
+                                "morphology_mip": null,
+                                "nucleus_boundaries_csv": null,
+                                "nucleus_boundaries_pq": null,
+                                "transcript_info_pq": null,
+                                "transcripts": null,
+                                "web_summary": "/home/workspace/xenium/renamed/output_corrected_TSS06403-004/XENIUM_RANGER_RENAMER_CS/XR_RENAME/fork0/chnk0-u48d5e683aa/files/analysis_summary.html"
+                            },
+                            "id": "output_bundle",
+                            "type": "CsBundle",
+                            "waiting": false
+                        }
+                    ]
+                },
+                "chunks": [
+                    {
+                        "chunkDef": {
+                            "__mem_gb": 4,
+                            "__threads": 1,
+                            "__vmem_gb": 16384
+                        },
+                        "metadata": {
+                            "path": "/home/workspace/xenium/renamed/output_corrected_TSS06403-004/XENIUM_RANGER_RENAMER_CS/XR_RENAME/fork0/chnk0",
+                            "names": [
+                                "args",
+                                "complete",
+                                "jobinfo",
+                                "log",
+                                "outs",
+                                "stderr",
+                                "stdout"
+                            ]
+                        },
+                        "state": "complete",
+                        "index": 0
+                    }
+                ],
+                "index": 0
+            }
+        ],
+        "edges": [],
+        "stagecodeLang": "Compiled",
+        "type": "stage"
+    }
+]

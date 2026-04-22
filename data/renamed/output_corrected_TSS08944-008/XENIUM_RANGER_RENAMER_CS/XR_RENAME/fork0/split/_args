@@ -1,0 +1,10 @@
+{
+    "command_line": "xeniumranger rename --id=output_corrected_TSS08944-008 --xenium-bundle=/home/workspace/xenium/bundles/TSS08944-007 --region-name=TSS08944-008 --cassette-name=EXP-02060",
+    "output_bundle_path": "/home/workspace/xenium/bundles/TSS08944-007",
+    "rename_params": {
+        "cassette_name": "EXP-02060",
+        "region_name": "TSS08944-008"
+    },
+    "run_id": "output_corrected_TSS08944-008",
+    "software_version": "xenium-4.0.1.1"
+}

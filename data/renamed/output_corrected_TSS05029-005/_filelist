@@ -1,0 +1,10 @@
+ 35932081      4 drwxr-xr-x   2 root     root         4096 Apr 20 12:50 /home/workspace/xenium/renamed/output_corrected_TSS05029-005/XENIUM_RANGER_RENAMER_CS/fork0/split/files
+ 35932083      4 drwxr-xr-x   2 root     root         4096 Apr 20 12:50 /home/workspace/xenium/renamed/output_corrected_TSS05029-005/XENIUM_RANGER_RENAMER_CS/fork0/join/files
+ 35932079      4 drwxr-xr-x   2 root     root         4096 Apr 20 12:50 /home/workspace/xenium/renamed/output_corrected_TSS05029-005/XENIUM_RANGER_RENAMER_CS/fork0/files
+ 35932097      4 drwxr-xr-x   2 root     root         4096 Apr 20 12:50 /home/workspace/xenium/renamed/output_corrected_TSS05029-005/XENIUM_RANGER_RENAMER_CS/XR_RENAME/fork0/split/files
+ 35932105      4 drwxr-xr-x   2 root     root         4096 Apr 20 12:50 /home/workspace/xenium/renamed/output_corrected_TSS05029-005/XENIUM_RANGER_RENAMER_CS/XR_RENAME/fork0/chnk0-u480ee68396/files
+ 35932130      0 lrwxrwxrwx   1 root     root           41 Apr 20 12:50 /home/workspace/xenium/renamed/output_corrected_TSS05029-005/XENIUM_RANGER_RENAMER_CS/XR_RENAME/fork0/chnk0-u480ee68396/files/analysis_summary.html -> ../../../../../outs/analysis_summary.html
+ 35932129      0 lrwxrwxrwx   1 root     root           37 Apr 20 12:50 /home/workspace/xenium/renamed/output_corrected_TSS05029-005/XENIUM_RANGER_RENAMER_CS/XR_RENAME/fork0/chnk0-u480ee68396/files/experiment.xenium -> ../../../../../outs/experiment.xenium
+ 35932077      0 lrwxrwxrwx   1 root     root           39 Apr 20 12:50 /home/workspace/xenium/renamed/output_corrected_TSS05029-005/XENIUM_RANGER_RENAMER_CS/XR_RENAME/fork0/chnk0-u480ee68396/files/metrics_summary.csv -> ../../../../../outs/metrics_summary.csv
+ 35932099      4 drwxr-xr-x   2 root     root         4096 Apr 20 12:50 /home/workspace/xenium/renamed/output_corrected_TSS05029-005/XENIUM_RANGER_RENAMER_CS/XR_RENAME/fork0/join/files
+ 35932095      0 lrwxrwxrwx   1 root     root           23 Apr 20 12:50 /home/workspace/xenium/renamed/output_corrected_TSS05029-005/XENIUM_RANGER_RENAMER_CS/XR_RENAME/fork0/files -> chnk0-u480ee68396/files

@@ -1,0 +1,111 @@
+Martian Runtime - v4.0.14
+2026-04-20 12:51:13 [build  ] Built with Go version go1.23.2 X:nocoverageredesign
+2026-04-20 12:51:13 [cmdline] mrp _invocation_output_corrected_tss08944-008.mro RENAME --psdir=output_corrected_TSS08944-008
+2026-04-20 12:51:13 [pid    ] 18708
+2026-04-20 12:51:13 [environ] HOSTNAME=pbmcflow-0
+2026-04-20 12:51:13 [environ] CONDA_PREFIX=/home/workspace/environment/minimal
+2026-04-20 12:51:13 [environ] PYTHONPASCSCR_INGRESS_PORT_8080_TCP_ADDR=10.61.88.243
+2026-04-20 12:51:13 [environ] HOME=/home/workspace
+2026-04-20 12:51:13 [environ] LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+2026-04-20 12:51:13 [environ] CONDA_PROMPT_MODIFIER=(/home/workspace/environment/minimal) 
+2026-04-20 12:51:13 [environ] SHLVL=2
+2026-04-20 12:51:13 [environ] PYTHONPASCSCR_INGRESS_SERVICE_PORT_HTTP=8080
+2026-04-20 12:51:13 [environ] PYTHONPASCSCR_INGRESS_PORT=tcp://10.61.88.243:8080
+2026-04-20 12:51:13 [environ] PYTHONPASCSCR_INGRESS_SERVICE_HOST=10.61.88.243
+2026-04-20 12:51:13 [environ] PATH=/home/workspace/xeniumranger-xenium4.0/lib/bin:/home/workspace/xeniumranger-xenium4.0/external/cellranger/lib/bin:/home/workspace/xeniumranger-xenium4.0/external/martian/bin:/home/workspace/xeniumranger-xenium4.0/external/cellranger/bin/tenkit:/home/workspace/xeniumranger-xenium4.0/external/anaconda/lib:/home/workspace/xeniumranger-xenium4.0/external/anaconda/bin:/home/workspace/xeniumranger-xenium4.0:/opt/xeniumranger-xenium4.0:/home/workspace/environment/minimal/bin:/opt/conda/condabin:/opt/conda/bin:/opt/conda/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+2026-04-20 12:51:13 [environ] CONDA_PREFIX_1=/opt/conda
+2026-04-20 12:51:13 [environ] PYTHONPASCSCR_INGRESS_PORT_8080_TCP_PORT=8080
+2026-04-20 12:51:13 [environ] LIBRARY_PATH=/usr/local/cuda/lib64/stubs
+2026-04-20 12:51:13 [environ] PYTHONPASCSCR_INGRESS_PORT_8080_TCP=tcp://10.61.88.243:8080
+2026-04-20 12:51:13 [environ] PYTHONPASCSCR_INGRESS_SERVICE_PORT=8080
+2026-04-20 12:51:13 [environ] SSH_AGENT_PID=15748
+2026-04-20 12:51:13 [environ] PWD=/home/workspace/xenium/renamed
+2026-04-20 12:51:13 [environ] CUDA_VERSION=12.2.0
+2026-04-20 12:51:13 [environ] LC_CTYPE=en_US.UTF-8
+2026-04-20 12:51:13 [environ] CONDA_DEFAULT_ENV=/home/workspace/environment/minimal
+2026-04-20 12:51:13 [environ] SHELL=/bin/bash
+2026-04-20 12:51:13 [environ] CONDA_EXE=/opt/conda/bin/conda
+2026-04-20 12:51:13 [environ] PYTHONPASCSCR_INGRESS_PORT_8080_TCP_PROTO=tcp
+2026-04-20 12:51:13 [environ] SSH_AUTH_SOCK=/tmp/ssh-XXXXXXq0oeSW/agent.15747
+2026-04-20 12:51:13 [environ] TERM=xterm-256color
+2026-04-20 12:51:13 [environ] CONDA_SHLVL=2
+2026-04-20 12:51:13 [environ] PYTHONDONTWRITEBYTECODE=1
+2026-04-20 12:51:13 [environ] CONDA_PYTHON_EXE=/opt/conda/bin/python
+2026-04-20 12:51:13 [environ] _=/home/workspace/xeniumranger-xenium4.0/xeniumranger
+2026-04-20 12:51:13 [environ] HDF5_USE_FILE_LOCKING=FALSE
+2026-04-20 12:51:13 [environ] LANG=C
+2026-04-20 12:51:13 [environ] PYTHONNOUSERSITE=1
+2026-04-20 12:51:13 [environ] PYTHONPATH=/home/workspace/xeniumranger-xenium4.0/external/com_github_10XDev_tenxnet:/home/workspace/xeniumranger-xenium4.0/external/com_github_10XDev_turing:/home/workspace/xeniumranger-xenium4.0/external/martian/adapters/python:/home/workspace/xeniumranger-xenium4.0/external/cellranger/lib/python:/home/workspace/xeniumranger-xenium4.0/lib/python
+2026-04-20 12:51:13 [environ] TENX_PRODUCT=xeniumranger
+2026-04-20 12:51:13 [environ] TENX_VERSION=xenium-4.0.1.1
+2026-04-20 12:51:13 [environ] TENX_COPYRIGHT=Copyright (c) 2023 10x Genomics, Inc.  All rights reserved.
+2026-04-20 12:51:13 [environ] MROPATH=/home/workspace/xeniumranger-xenium4.0/mro:/home/workspace/xeniumranger-xenium4.0/external/cellranger/mro
+2026-04-20 12:51:13 [version] MRO Version=xenium-4.0.1.1
+2026-04-20 12:51:13 [options] --jobmode=local
+2026-04-20 12:51:13 [options] --vdrmode=rolling
+2026-04-20 12:51:13 [options] --profile=disable
+2026-04-20 12:51:13 [options] --stackvars=false
+2026-04-20 12:51:13 [options] --zip=false
+2026-04-20 12:51:13 [options] --limit-loadavg=false
+2026-04-20 12:51:13 [options] --noexit=false
+2026-04-20 12:51:13 [options] --nopreflight=false
+2026-04-20 12:51:13 [jobmngr] Job config = /home/workspace/xeniumranger-xenium4.0/external/martian/jobmanagers/config.json
+2026-04-20 12:51:13 [jobmngr] Using 16 logical cores available on system.
+2026-04-20 12:51:13 [jobmngr] Using 56 GB, 90% of system memory.
+2026-04-20 12:51:13 [sysinfo] linux amd64
+2026-04-20 12:51:13 [sysinfo] Linux kernel release version: 6.12.55+
+2026-04-20 12:51:13 [sysinfo] glibc version: 2.35
+2026-04-20 12:51:13 [filesys] Pipestance path /home/workspace/xenium/renamed/output_corrected_TSS08944-008
+2026-04-20 12:51:13 [filesys] Pipestance filesystem type ext
+2026-04-20 12:51:13 [filesys] 2.0 TB and 130,943,514 inodes available.
+2026-04-20 12:51:13 [filesys] Pipestance filesystem ext4 mount options: rw,relatime,rw
+2026-04-20 12:51:13 [filesys] Pipestance directory permissions drwxr-xr-x owned by uid 0 gid 0
+2026-04-20 12:51:13 [filesys] Bin path /home/workspace/xeniumranger-xenium4.0/external/martian/bin
+2026-04-20 12:51:13 [filesys] Bin filesystem type ext
+2026-04-20 12:51:13 [filesys] Bin filesystem ext4 mount options: rw,relatime,rw
+2026-04-20 12:51:13 [filesys] Executable file permissions -rwxr-xr-x owned by uid 4018 gid 4000
+2026-04-20 12:51:13 [user   ] User root uid 0 / gid 0
+Serving UI at http://pbmcflow-0:39733?auth=5PZz5F5wGYVrTk5UPLxiaqcrYeuwhqDQZAll48Khg10
+
+Running preflight checks (please wait)...
+2026-04-20 12:51:13 [runtime] (ready)           ID.RENAME.XENIUM_RANGER_RENAMER_CS.XR_RENAME
+2026-04-20 12:51:13 [runtime] (run:local)       ID.RENAME.XENIUM_RANGER_RENAMER_CS.XR_RENAME.fork0.chnk0.main
+2026-04-20 12:51:13 [runtime] (chunks_complete) ID.RENAME.XENIUM_RANGER_RENAMER_CS.XR_RENAME
+2026-04-20 12:51:13 [runtime] VDR killed 0 files, 0 B.
+
+Outputs:
+- metrics_summary:                            /home/workspace/xenium/renamed/output_corrected_TSS08944-008/outs/metrics_summary.csv
+- transcripts:                                null
+- Transcript info parquet:                    null
+- Cell info CSV:                              null
+- Cell info parquet:                          null
+- Cell segmentation result:                   null
+- Cell segmentation nucleus polygons CSV:     null
+- Cell segmentation cell polygons CSV:        null
+- Cell segmentation nucleus polygons parquet: null
+- Cell segmentation cell polygons parquet:    null
+- Clustering result in zarr.zip format:       null
+- Cell-feature matrix in zarr.zip format:     null
+- Cell-feature matrix in h5 format:           null
+- morphology:                                 null
+- CS multi-file OME-TIFF (AUTOFOCUS):         null
+- Metadata for Xenium Explorer:               /home/workspace/xenium/renamed/output_corrected_TSS08944-008/outs/experiment.xenium
+- Customer-facing web summary:                /home/workspace/xenium/renamed/output_corrected_TSS08944-008/outs/analysis_summary.html
+- Cell-feature matrix in MEX format:          null
+- Clustering result in csv format:            null
+- Auxiliary output files:                     null
+- Gene panel JSON:                            null
+
+2026-04-20 12:51:13 [perform] Serializing pipestance performance data.
+Waiting 6 seconds for UI to do final refresh.
+Pipestance completed successfully!
+
+2026-04-20 12:51:19 Shutting down.
+2026-04-20 12:51:19 [jobmngr] Highest memory usage observed: {
+  "rss": 12705792,
+  "shared": 9547776,
+  "vmem": 1721630720,
+  "text": 5275648,
+  "stack": 93589504,
+  "proc_count": 12
+}

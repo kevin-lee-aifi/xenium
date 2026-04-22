@@ -1,0 +1,61 @@
+run_name,region_name,difference_type,difference_detail
+EX-002024-002031_032626,TSS04855-004,rounding_only,adjusted_genomic_control_probe_rate: [metric=6.91063755652287e-05] vs [totalqc=6.91E-05] | negative_control_probe_counts_per_control_per_cell: [metric=2.15246729805707e-05] vs [totalqc=2.15E-05] | genomic_control_probe_counts_per_control_per_cell: [metric=9.87936797731302e-06] vs [totalqc=9.88E-06]
+EX-002024-002031_032626,TSS04855-005,rounding_only,negative_control_probe_counts_per_control_per_cell: [metric=2.03282081608516e-05] vs [totalqc=2.03E-05] | genomic_control_probe_counts_per_control_per_cell: [metric=1.25715573041754e-05] vs [totalqc=1.26E-05]
+EX-002024-002031_032626,TSS06404-004,rounding_only,adjusted_negative_control_probe_rate: [metric=8.8534371405546e-05] vs [totalqc=8.85E-05] | adjusted_genomic_control_probe_rate: [metric=2.74525182652856e-05] vs [totalqc=2.75E-05] | negative_control_probe_counts_per_control_per_cell: [metric=1.00113813598617e-05] vs [totalqc=1.00E-05] | genomic_control_probe_counts_per_control_per_cell: [metric=3.01094176236443e-06] vs [totalqc=3.01E-06]
+EX-002024-002031_032626,TSS06404-005,rounding_only,adjusted_negative_control_probe_rate: [metric=8.10618450974977e-05] vs [totalqc=8.11E-05] | adjusted_genomic_control_probe_rate: [metric=3.43118921047609e-05] vs [totalqc=3.43E-05] | negative_control_probe_counts_per_control_per_cell: [metric=8.54554776961203e-06] vs [totalqc=8.55E-06] | genomic_control_probe_counts_per_control_per_cell: [metric=3.25544676937601e-06] vs [totalqc=3.26E-06]
+EX-002024-002031_032626,TSS08944-005,rounding_only,adjusted_genomic_control_probe_rate: [metric=6.21330897079278e-05] vs [totalqc=6.21E-05] | genomic_control_probe_counts_per_control_per_cell: [metric=4.48320811562818e-05] vs [totalqc=4.48E-05]
+EX-002024-002031_032626,TSS08944-006,rounding_only,adjusted_genomic_control_probe_rate: [metric=7.88297365865966e-05] vs [totalqc=7.88E-05] | genomic_control_probe_counts_per_control_per_cell: [metric=6.35417918509033e-05] vs [totalqc=6.35E-05]
+EXP-01913-01914_01-23-2026,TIS10546-002-002-032,rounding_only,fraction_empty_cells: [metric=2.47506373288742e-05] vs [totalqc=2.48E-05]
+EXP-01913-01914_012026,TIS11578-001-003,rounding_only,adjusted_negative_control_codeword_rate: [metric=9.52316294127713e-05] vs [totalqc=9.52E-05]
+EXP-01913-01914_012026,TIS11578-005-003,rounding_only,adjusted_negative_control_codeword_rate: [metric=9.87814115419712e-05] vs [totalqc=9.88E-05]
+EXP-01915-01916_01-14-2026,TIS10546-002-002-028,rounding_only,fraction_empty_cells: [metric=7.10476418843697e-05] vs [totalqc=7.10E-05]
+EXP-01939-01940_1-30-2026,TIS11578-017-003,rounding_only,adjusted_negative_control_codeword_rate: [metric=6.12701532057062e-05] vs [totalqc=6.13E-05]
+EXP-01946-01947_013026,TIS10543-004-001-002,rounding_only,fraction_empty_cells: [metric=8.978502898771e-05] vs [totalqc=8.98E-05]
+EXP-01946-01947_013026,TIS10546-002-002-039,rounding_only,negative_control_probe_counts_per_control_per_cell: [metric=7.77721328702963e-05] vs [totalqc=7.78E-05]
+EXP-01967-01968_021226,TIS10546-002-002-033,rounding_only,negative_control_probe_counts_per_control_per_cell: [metric=8.86600822079744e-05] vs [totalqc=8.87E-05] | fraction_empty_cells: [metric=9.02392694224208e-06] vs [totalqc=9.02E-06]
+EXP-01967-01968_021226,TIS10546-002-002-034,rounding_only,negative_control_probe_counts_per_control_per_cell: [metric=8.82109231301561e-05] vs [totalqc=8.82E-05] | fraction_empty_cells: [metric=1.36584655169303e-05] vs [totalqc=1.37E-05]
+EXP-01967-01968_021226,TMA00322,row_only_in_metric_summary,Row exists in metric_summary but not in TotalQC
+EXP-01975-01976_021326,tss10766-001,row_only_in_metric_summary,Row exists in metric_summary but not in TotalQC
+EXP-01977-01978_022626,TSS00003,rounding_only,decoded_transcripts_per_100um2: [metric=5.14063924135489e-05] vs [totalqc=5.14E-05]
+EXP-01977-01978_022626,TSS10546-006,rounding_only,segmented_cell_boundary_frac: [metric=6.74008869956729e-05] vs [totalqc=6.74E-05]
+EXP-01989-01990_022626,TIS10546-002-002-036,rounding_only,fraction_empty_cells: [metric=1.84065453675553e-05] vs [totalqc=1.84E-05]
+EXP-01989-01990_022626,TIS10546-002-002-037,rounding_only,fraction_empty_cells: [metric=9.82805582335766e-05] vs [totalqc=9.83E-05]
+EXP-01989-01990_022626,TMA00328,rounding_only,adjusted_negative_control_codeword_rate: [metric=9.0422878616725e-05] vs [totalqc=9.04E-05]
+EXP-01991-01992_02-25-2026,TSS10546-002,rounding_only,fraction_empty_cells: [metric=1.96182292586666e-05] vs [totalqc=1.96E-05]
+EXP-02001-02002_20260305,TSS10546-004,rounding_only,fraction_empty_cells: [metric=4.09481545178281e-05] vs [totalqc=4.09E-05]
+EXP-02007-02008,TSS10546-009,rounding_only,fraction_empty_cells: [metric=2.63164820126782e-05] vs [totalqc=2.63E-05]
+EXP-02007-02008,TSS10546-010,rounding_only,fraction_empty_cells: [metric=1.09137540585946e-05] vs [totalqc=1.09E-05]
+EXP-02010-02011_03-13-2026,TSS10738-009,rounding_only,negative_control_probe_counts_per_control_per_cell: [metric=8.04366938288129e-05] vs [totalqc=8.04E-05]
+EXP-02010-02011_03-13-2026,TSS10738-010,rounding_only,adjusted_negative_control_codeword_rate: [metric=2.89369348329095e-05] vs [totalqc=2.89E-05]
+EXP-02016-02017_20260319,TSS10546-011,rounding_only,negative_control_probe_counts_per_control_per_cell: [metric=8.20806547280255e-05] vs [totalqc=8.21E-05] | segmented_cell_boundary_frac: [metric=1.19825773325585e-05] vs [totalqc=1.20E-05]
+EXP-02016-02017_20260319,TSS10546-012,rounding_only,segmented_cell_boundary_frac: [metric=3.02462041013853e-05] vs [totalqc=3.02E-05]
+EXP-02016-02017_20260319,TSS10934-001,rounding_only,segmented_cell_boundary_frac: [metric=6.44109106929841e-05] vs [totalqc=6.44E-05]
+EXP-02019-02020_03-18-2026,TSS10546-013,rounding_only,fraction_empty_cells: [metric=8.49290559286064e-05] vs [totalqc=8.49E-05]
+EXP-02019-02020_03-18-2026,TSS10546-014,rounding_only,fraction_empty_cells: [metric=6.70623344398713e-05] vs [totalqc=6.71E-05]
+EXP-02035-02036-040226,TSS10546-017,row_only_in_TotalQC,Row exists in TotalQC but not in metric_summary
+EXP-02035-02036-040226,TSS10932-001,row_only_in_TotalQC,Row exists in TotalQC but not in metric_summary
+EXP-02035-02036-040226,TSS10937-002,row_only_in_TotalQC,Row exists in TotalQC but not in metric_summary
+EXP-02037-02038-040226,TSS10546-019,row_only_in_TotalQC,Row exists in TotalQC but not in metric_summary
+EXP-02037-02038-040226,TSS10931-001,row_only_in_TotalQC,Row exists in TotalQC but not in metric_summary
+EXP-02037-02038-040226,TSS10931-002,row_only_in_TotalQC,Row exists in TotalQC but not in metric_summary
+EXP-02037-02038-040226,TSS10932-002,row_only_in_TotalQC,Row exists in TotalQC but not in metric_summary
+EXP-02051-02052_04-09-2026,TSS10546-020,row_only_in_TotalQC,Row exists in TotalQC but not in metric_summary
+EXP-02051-02052_04-09-2026,TSS10546-021,row_only_in_TotalQC,Row exists in TotalQC but not in metric_summary
+EXP-02051-02052_04-09-2026,TSS12140-001,row_only_in_TotalQC,Row exists in TotalQC but not in metric_summary
+EXP-02051-02052_04-09-2026,TSS12141-001,row_only_in_TotalQC,Row exists in TotalQC but not in metric_summary
+EXP-02051-02052_04-09-2026,TSS12141-001,row_only_in_TotalQC,Row exists in TotalQC but not in metric_summary
+EXP-02051-02052_04-09-2026,TSS12141-001,row_only_in_TotalQC,Row exists in TotalQC but not in metric_summary
+EXP-02051-02052_04-09-2026,TSS12141-001,row_only_in_TotalQC,Row exists in TotalQC but not in metric_summary
+EXP-02051-02052_04-09-2026,TSS12141-001,row_only_in_TotalQC,Row exists in TotalQC but not in metric_summary
+EXP-02051-02052_04-09-2026,TSS12141-001,row_only_in_TotalQC,Row exists in TotalQC but not in metric_summary
+EXP-02051-02052_04-09-2026,TSS12260-001,row_only_in_TotalQC,Row exists in TotalQC but not in metric_summary
+EXP-02051-02052_04-09-2026,TSS12261-001,row_only_in_TotalQC,Row exists in TotalQC but not in metric_summary
+EXP-02055-02056_040926,TSS00014,row_only_in_TotalQC,Row exists in TotalQC but not in metric_summary
+EXP-02055-02056_040926,TSS10546-022,row_only_in_TotalQC,Row exists in TotalQC but not in metric_summary
+EXP-02055-02056_040926,TSS10546-023,row_only_in_TotalQC,Row exists in TotalQC but not in metric_summary
+EXP-02055-02056_040926,TSS12269-001,row_only_in_TotalQC,Row exists in TotalQC but not in metric_summary
+EXP-02055-02056_040926,TSS12269-002,row_only_in_TotalQC,Row exists in TotalQC but not in metric_summary
+EXP-02055-02056_040926,TSS12270-001,row_only_in_TotalQC,Row exists in TotalQC but not in metric_summary
+EXP-02055-02056_040926,TSS12270-002,row_only_in_TotalQC,Row exists in TotalQC but not in metric_summary
+EXP-02055-02056_040926,TSS12271-001,row_only_in_TotalQC,Row exists in TotalQC but not in metric_summary
+EXP-02055-02056_040926,TSS12271-002,row_only_in_TotalQC,Row exists in TotalQC but not in metric_summary
