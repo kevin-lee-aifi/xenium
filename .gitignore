@@ -1,3 +1,5 @@
 **/csvs/
+**/htmls/
 .ipynb_checkpoints
-data/2026_metric_summaries/
+data/*
+!data/README.md
