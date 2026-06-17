@@ -33,15 +33,47 @@ if [ ! -x "${XENIUMRANGER_BIN}" ]; then
     exit 1
 fi
 
+if ! command -v gcloud >/dev/null 2>&1; then
+    echo "ERROR: gcloud not found in PATH"
+    exit 1
+fi
+
+# Validate rename values before the expensive download. xeniumranger limits
+# region names to 64 chars and cassette names to 32, both restricted to
+# letters, numbers, underscores, and hyphens.
+validate_xr_name() {
+    local label="$1" value="$2" max_len="$3"
+    if (( ${#value} > max_len )) || [[ ! "${value}" =~ ^[A-Za-z0-9_-]+$ ]]; then
+        echo "ERROR: ${label} must be <= ${max_len} chars and use only letters, numbers, '_' and '-': '${value}'"
+        exit 1
+    fi
+}
+validate_xr_name "CORRECT_SAMPLE / region name"       "${CORRECT_SAMPLE}"     64
+validate_xr_name "CORRECT_EXPERIMENT / cassette name" "${CORRECT_EXPERIMENT}" 32
+
 mkdir -p "${BUNDLE_BASE}" "${OUTPUT_BASE}"
 
 echo "Sample: ${INCORRECT_SAMPLE}${SLIDE_ID:+ (slide ${SLIDE_ID})}"
 
-# Find the bucket folder matching the sample ID (and slide ID, if given).
-mapfile -t MATCHES < <(
-    gcloud storage ls "${BUCKET}/" 2>/dev/null | grep '/$' \
-        | grep -F "${INCORRECT_SAMPLE}" | grep -F "${SLIDE_ID}"
-)
+# List the bucket root, failing loudly on auth/network/permission errors.
+# (The old process-substitution form hid those as "no folder matched".)
+if ! BUCKET_LIST="$(gcloud storage ls "${BUCKET}/")"; then
+    echo "ERROR: failed to list bucket root: ${BUCKET}/"
+    exit 1
+fi
+
+# Match the sample ID as a delimited folder-name field (e.g. __TSS12577-002__),
+# not a loose substring, so one ID can't match another that contains it.
+MATCHES=()
+while IFS= read -r url; do
+    [[ "${url}" == */ ]] || continue
+    name="$(basename "${url%/}")"
+    [[ "${name}" == *"__${INCORRECT_SAMPLE}__"* ]] || continue
+    if [[ -n "${SLIDE_ID}" && "${name}" != *"__${SLIDE_ID}__"* ]]; then
+        continue
+    fi
+    MATCHES+=("${url}")
+done <<< "${BUCKET_LIST}"
 
 if [ "${#MATCHES[@]}" -eq 0 ]; then
     echo "ERROR: no bucket folder matched ${INCORRECT_SAMPLE}."
@@ -72,9 +104,13 @@ echo "Syncing full bundle from ${SRC_DIR}"
 gcloud storage rsync -r "${SRC_DIR}" "${BUNDLE_PATH}/" \
     || { echo "ERROR: failed to sync bundle — aborting."; exit 1; }
 
-# Unique run folder so repeat runs don't overwrite each other.
+# xeniumranger refuses to run when its --id folder already exists. On success
+# the run folder is removed below; on failure it is kept for inspection, so
+# clear any stale one here before retrying.
 RUN_ID="output_corrected_${CORRECT_SAMPLE}"
+RUN_PATH="${OUTPUT_BASE}/${RUN_ID}"
 echo "Renaming → ${RUN_ID} (region ${CORRECT_SAMPLE}, cassette ${CORRECT_EXPERIMENT})"
+rm -rf "${RUN_PATH}"
 
 # xeniumranger writes to the current dir; cd in a subshell so it doesn't leak.
 (
@@ -89,7 +125,6 @@ RENAME_RC=$?
 
 # Promote the `outs` folder out of the parent run folder and delete the rest.
 if [ ${RENAME_RC} -eq 0 ]; then
-    RUN_PATH="${OUTPUT_BASE}/${RUN_ID}"
     OUTS_PATH="${RUN_PATH}/outs"
 
     if [ -e "${FINAL_PATH}" ]; then
@@ -113,6 +148,18 @@ if [ ${RENAME_RC} -eq 0 ]; then
     DEST_CORRECTED="${BUCKET}/${FINAL_NAME}"
     DEST_WRONG="${BUCKET}/${WRONG_ID_PREFIX}/${SRC_NAME}"
 
+    # gcloud storage mv is copy-then-delete per object (not atomic), and rsync
+    # would silently merge into an existing prefix. Refuse if either bucket
+    # destination already exists.
+    if gcloud storage ls "${DEST_CORRECTED}/" >/dev/null 2>&1; then
+        echo "ERROR: corrected destination already exists in bucket: ${DEST_CORRECTED}/"
+        exit 1
+    fi
+    if gcloud storage ls "${DEST_WRONG}/" >/dev/null 2>&1; then
+        echo "ERROR: wrong-id destination already exists in bucket: ${DEST_WRONG}/"
+        exit 1
+    fi
+
     echo
     echo "Bucket changes to apply:"
     echo "  upload  ${FINAL_PATH}/  →  ${DEST_CORRECTED}/"
@@ -132,7 +179,7 @@ if [ ${RENAME_RC} -eq 0 ]; then
         || { echo "ERROR: upload failed — original folder left in place."; exit 1; }
 
     echo "Moving incorrect folder → ${DEST_WRONG}/"
-    gcloud storage mv "${SRC_DIR%/}" "${DEST_WRONG}" \
+    gcloud storage mv --no-clobber "${SRC_DIR%/}" "${DEST_WRONG}" \
         || { echo "ERROR: move of incorrect folder failed — review bucket manually."; exit 1; }
 
     echo "✓ Bucket updated."
@@ -140,6 +187,7 @@ if [ ${RENAME_RC} -eq 0 ]; then
     echo "Removing input bundle: ${BUNDLE_PATH}"
     rm -rf "${BUNDLE_PATH}"
 else
-    echo "✗ rename FAILED for ${INCORRECT_SAMPLE}"
+    echo "ERROR: rename failed for ${INCORRECT_SAMPLE}"
     echo "  Input bundle kept at ${BUNDLE_PATH} for retry."
+    exit "${RENAME_RC}"
 fi
