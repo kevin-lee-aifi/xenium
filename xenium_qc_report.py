@@ -29,8 +29,13 @@ Before running, edit the CONFIG section below.
       RUN_NAME  — run name, used in the report title.
 
     Download (GCS) settings:
-      BUCKET_NAME — GCS bucket holding the metrics files (no ``gs://`` prefix).
-      SLIDE_IDS   — comma-separated list of slide IDs to fetch.
+      SLIDE_IDS   — comma-separated list of slide IDs to fetch. This is the only
+                    input needed to grab data off the bucket; each slide's
+                    ``metrics_summary.csv`` (and ``analysis_summary.html``) is
+                    located by the slide ID alone. Runs under the bucket's
+                    ``wrong_id/`` folder are always skipped.
+      BUCKET_NAME — fixed GCS bucket holding the metrics files; edit only if the
+                    transfer bucket itself changes.
 
 The remaining values are derived from ``EXP_ID`` / ``RUN_NAME`` and do not need
 to be edited.
@@ -50,12 +55,12 @@ from matplotlib.backends.backend_pdf import PdfPages
 # ──────────────────────────────────────────────────────────────────────────────
 
 # ── Required ──────────────────────────────────────────────────────────────────
-EXP_ID = "EXP-02152-02153"
-RUN_NAME = "061226"  # e.g. "060526"
+EXP_ID = "EXP-02194-02195"
+RUN_NAME = "071626"  # e.g. "060526"
 
 # ── Download cell (GCS) ───────────────────────────────────────────────────────
-BUCKET_NAME = "temp-xenium-hise-transfer"
-SLIDE_IDS = "0097818, 0097875"  # comma-separated slide IDs
+SLIDE_IDS = "0074357, 0089387"  # only per-run input: comma-separated slide IDs
+BUCKET_NAME = "temp-xenium-hise-transfer"  # fixed; edit only if the bucket changes
 
 # ── Derived (no need to edit) ─────────────────────────────────────────────────
 BASE_DIR = Path("/home/workspace/xenium/qc") / EXP_ID
@@ -92,9 +97,15 @@ def download_metrics_from_bucket():
     for slide_id in slide_list:
         print(f"Looking for slide {slide_id}...")
 
+        # Match the slide ID as a real ``__``-delimited token in the output
+        # folder name (avoids loose substring hits), and skip anything under the
+        # bucket's ``wrong_id/`` folder — those are mis-labelled runs whose slide
+        # IDs collide with real ones and must never be folded into a report.
         matches = [
             name for name in names
-            if slide_id in name and name.endswith("metrics_summary.csv")
+            if name.endswith("metrics_summary.csv")
+            and "wrong_id/" not in name
+            and slide_id in name.split("/")[-2].split("__")
         ]
 
         if not matches:
@@ -106,7 +117,7 @@ def download_metrics_from_bucket():
         for match in matches:
             # Extract the run folder, e.g.
             # output-XETG00195__0082215__TSS10546-041__20260605__173502
-            folder = match.split("/")[0]
+            folder = next(p for p in match.split("/") if p.startswith("output-"))
             parts = folder.split("__")
 
             # parts: [output-XETG00195, 0082215, TSS10546-041, 20260605, 173502]
@@ -118,8 +129,8 @@ def download_metrics_from_bucket():
             bucket.blob(match).download_to_filename(str(csv_dst))
             print(f"  Done -> {csv_dst}")
 
-            # Download analysis_summary.html from the same run folder
-            html_blob = f"{folder}/analysis_summary.html"
+            # Download analysis_summary.html sitting alongside the metrics CSV
+            html_blob = match.rsplit("/", 1)[0] + "/analysis_summary.html"
             if html_blob in names:
                 html_dst = html_output / f"{prefix}_analysis_summary.html"
                 bucket.blob(html_blob).download_to_filename(str(html_dst))

@@ -1,43 +1,38 @@
 #!/bin/bash
+set -euo pipefail
 
-# --- Configuration ---
-BASE_DIR="/home/workspace"
+# Bulk-download metrics_summary.csv files from GCS for runs between
+# April 1 2026 and July 31 2026 (folder date token: 20260401–20260731).
+# Skips wrong_id/ folders. Output files are named <folder>_metric_summary.csv.
+
 BUCKET="gs://temp-xenium-hise-transfer"
-OUTPUT="${BASE_DIR}/xenium/data/2026_metric_summaries"
+OUTPUT="/home/workspace/xenium/data/2026_metric_summaries"
+DATE_MIN=20260401
+DATE_MAX=20260731
 
-# Ensure the local output directory exists before writing any files into it.
-# The -p flag suppresses errors if it already exists and creates parent dirs.
 mkdir -p "${OUTPUT}"
 
-# --- Main Loop ---
-# `gcloud storage ls` returns lines like: gs://bucket-name/folder_name/
-# We use a `while read` loop instead of `for` because `while read` processes
-# one line at a time, safely handling any whitespace in paths.
-# `IFS=` prevents leading/trailing whitespace from being stripped.
-# `-r` prevents backslash interpretation.
-# Process substitution `< <(...)` feeds the command output as a file stream.
-while IFS= read -r content; do
+echo "Listing all metrics_summary.csv files in bucket..."
+mapfile -t ALL_METRICS < <(gcloud storage ls "${BUCKET}/**/metrics_summary.csv")
+echo "Found ${#ALL_METRICS[@]} total CSV(s). Filtering by date range..."
 
-    # Step 1: Strip the trailing slash, then extract just the last path component.
-    # `${content%/}` is parameter expansion — it removes the trailing `/`.
-    # `basename` then returns only the final segment (e.g., "sample_2026_run1").
-    folder=$(basename "${content%/}")
+count=0
+for uri in "${ALL_METRICS[@]}"; do
+    [[ "${uri}" == *"/wrong_id/"* ]] && continue
 
-    # Step 2: Skip blank lines or the bucket root itself (edge cases from `ls`).
-    [[ -z "${folder}" ]] && continue
+    folder="$(basename "$(dirname "${uri}")")"
 
-    # Step 3: Pattern match using double-bracket [[ ]] — the only Bash construct
-    # that supports glob wildcards like * in conditional expressions.
-    # This checks if the folder name contains the substring "_2026" anywhere.
-    if [[ "${folder}" == *"_2026"* ]]; then
-        echo "Found matching folder: ${folder}"
+    # Date is the 4th double-underscore-delimited token (e.g. 20260605).
+    date_token="$(awk -F'__' '{print $4}' <<< "${folder}")"
+    [[ -z "${date_token}" ]] && continue
+    [[ "${date_token}" =~ ^[0-9]{8}$ ]] || continue
 
-        # Step 4: Copy the metrics_summary.csv from the matched GCS folder
-        # to a locally named file that includes the folder name for traceability.
-        # If metrics_summary.csv is nested deeper, change to: "${BUCKET}/${folder}/**/metrics_summary.csv"
-        gcloud storage cp \
-            "${BUCKET}/${folder}/metrics_summary.csv" \
-            "${OUTPUT}/${folder}_metric_summary.csv"
+    if (( date_token >= DATE_MIN && date_token <= DATE_MAX )); then
+        dest="${OUTPUT}/${folder}_metric_summary.csv"
+        gcloud storage cp "${uri}" "${dest}"
+        echo "  Saved -> ${dest}"
+        count=$((count + 1))
     fi
+done
 
-done < <(gcloud storage ls "${BUCKET}/")
+echo "Done. Downloaded ${count} file(s) to ${OUTPUT}."
